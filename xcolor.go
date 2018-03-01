@@ -13,7 +13,7 @@ package xcolor
 
 import (
 	"fmt"
-	gocolor "image/color"
+	"image/color"
 	"strconv"
 	"strings"
 )
