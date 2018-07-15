@@ -46,11 +46,12 @@ func LoadPreset(name string) error {
 
 // GoColor converts a color expression to a color value of the standard
 // color.Color type. Equivalent to Parse(expr).GoColor().
-func GoColor(expr string) (clr color.Color, err error) {
-	if xclr, err := Parse(expr); err == nil {
+func GoColor(expr string) (color.Color, error) {
+	xclr, err := Parse(expr)
+	if err == nil {
 		return xclr.GoColor(), nil
 	}
-	return
+	return nil, err
 }
 
 // Parse converts a color expression to a Color value.
